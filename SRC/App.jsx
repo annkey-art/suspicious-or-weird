@@ -103,3 +103,64 @@ export default function App() {
   if (!started) {
     return (
       <main className="page">
+        <section className="card hero">
+          <p className="eyebrow">Serious business. Slightly suspicious questions.</p>
+          <h1>Suspicious or Just Weird?</h1>
+          <p className="lead">
+            A tiny deal-checker for investors, founders, and people who have heard too many confident sentences.
+          </p>
+          <button onClick={() => setStarted(true)}>Check the deal</button>
+        </section>
+      </main>
+    );
+  }
+
+  if (done) {
+    return (
+      <main className="page">
+        <section className={`card result ${result.level}`}>
+          <p className="eyebrow">Result</p>
+          <h1>{result.title}</h1>
+          <p className="lead">{result.tone}</p>
+
+          <div className="score">Risk score: {score}</div>
+
+          <div className="cta">
+            <p>
+              If something feels off but you cannot explain it, you do not need panic.
+              You need a second brain with a flashlight.
+            </p>
+            <a href="mailto:hello@example.com">Talk to me</a>
+          </div>
+
+          <button className="secondary" onClick={restart}>Start again</button>
+        </section>
+      </main>
+    );
+  }
+
+  const q = questions[index];
+
+  return (
+    <main className="page">
+      <section className="card">
+        <p className="eyebrow">Question {index + 1} / {questions.length}</p>
+        <h1>{q.text}</h1>
+
+        {q.funny && (
+          <p className="note">
+            This question is legally useless, emotionally necessary.
+          </p>
+        )}
+
+        <div className="answers">
+          {q.answers.map((a, i) => (
+            <button key={i} onClick={() => answer(a)}>
+              {a.text}
+            </button>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
