@@ -121,3 +121,33 @@ button:hover,
 .result.high {
   border-color: #e48787;
 }
+.page {
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before,
+.page::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+/* Left thinker */
+.page::before {
+  bottom: 0;
+  left: 0;
+  background-image: url('/thinker.png');
+}
+
+/* Right confident guy */
+.page::after {
+  top: 0;
+  right: 0;
+  background-image: url('/presenter.png');
+}
