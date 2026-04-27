@@ -129,8 +129,13 @@ export default function App() {
             <p>
               If something feels off but you cannot explain it, you do not need panic.
               You need a second brain with a flashlight.
-            </p>
-            <a href="mailto:hello@example.com">Talk to me</a>
+            </p><a
+  href="https://wa.me/48799148776?text=Hi%20Ania%2C%20I%20used%20Suspicious%20or%20Just%20Weird%20and%20I%20want%20to%20talk."
+  target="_blank"
+  rel="noreferrer"
+>
+  Talk to me on WhatsApp
+</a>
           </div>
 
           <button className="secondary" onClick={restart}>Start again</button>
