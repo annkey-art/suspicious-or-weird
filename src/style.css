@@ -9,6 +9,15 @@ body {
   color: #1f1f1f;
 }
 
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #eae5dc;
+  position: relative;
+}
+
 .page::before {
   content: "";
   position: absolute;
@@ -16,12 +25,6 @@ body {
   background: #eae5dc;
   opacity: 0.2;
   pointer-events: none;
-}
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-background: #eae5dc;
 }
 
 .card {
