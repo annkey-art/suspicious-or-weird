@@ -142,12 +142,12 @@ button:hover,s
 .page::before {
   bottom: 0;
   left: 0;
-  background-image: url('/thinker.png');
+  background-image: url('/suspicious-or-weird/thinker.png');
 }
 
 /* Right confident guy */
 .page::after {
   top: 0;
   right: 0;
-  background-image: url('/presenter.png');
+  background-image: url('/suspicious-or-weird/presenter.png');
 }
