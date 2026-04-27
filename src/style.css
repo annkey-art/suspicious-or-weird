@@ -134,7 +134,7 @@ button:hover,
   height: 220px;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.12;
+  opacity: 0.6;
   pointer-events: none;
 }
 
